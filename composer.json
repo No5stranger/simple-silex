@@ -1,0 +1,15 @@
+{
+    "require": {
+        "silex/silex": "~1.1",
+        "symfony/class-loader": "2.3.3",
+        "filp/whoops": "1.0.8",
+        "twig/twig": ">1.8,<2.0-dev",
+        "symfony/twig-bridge": "2.3.3",
+        "raveren/kint": "dev-1.0.0-wip"
+    },
+    "autoload": {
+        "psr-4": {
+            "Myele\\Controller\\Cjp\\": "src/apps/cjp/controllers"
+        }
+    }
+}
