@@ -3,6 +3,8 @@ namespace Myele\Controller\Cjp;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Cookie;
 
 class TestController
 {
@@ -30,9 +32,20 @@ class TestController
 
     public function cookieAction(Application $app, Request $request)
     {
-        $s_cookie = $request->cookies->get('SID');
+        //if want to set cookie, stop d();
         $ele_cookie = $request->cookies->get('eleme__eleme_cjp');
-        d($ele_cookie);
-        return $ele_cookie . '+++' . $s_cookie;
+        $dt = new \DateTime();
+        $dt->modify("+1 month");
+        //d($dt);
+        $c = new Cookie("abc", "cjp", $dt);
+        //d($c->getValue('abc'));
+        $response = new Response(
+            'content',
+            200
+        );
+        $response->headers->setCookie($c);
+        //d($ele_cookie);
+        return $response;
+        //return $ele_cookie . '+++' . $s_cookie;
     }
 }
