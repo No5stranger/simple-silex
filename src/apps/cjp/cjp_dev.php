@@ -12,7 +12,7 @@ ExceptionHandler::register();
 
 $app = new Application();
 
-//include 'service.php';
+include 'service.php';
 
 $app['debug'] = true;
 

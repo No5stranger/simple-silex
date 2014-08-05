@@ -14,6 +14,7 @@ class TestController
             'big' => 'cxp',
             'small' => 'cjp'
         );
+        d($result);
         return $app->json($result);
     }
 
