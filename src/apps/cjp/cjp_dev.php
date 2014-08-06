@@ -11,6 +11,7 @@ ErrorHandler::register();
 ExceptionHandler::register();
 
 $app = new Application();
+$app['route_class'] = 'Myele\\Component\\Route\\Route';
 
 include 'service.php';
 
