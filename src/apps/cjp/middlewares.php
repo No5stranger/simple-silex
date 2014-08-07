@@ -30,3 +30,14 @@ $app->finish(
         d('finish middlerwares');
     }
 );
+
+$app->error(
+    function (\Exception $e, $code) use ($app) {
+        switch ($code) {
+            case 404:
+                return '404 bad request';
+            default:
+                return '500';
+        }
+    }
+);

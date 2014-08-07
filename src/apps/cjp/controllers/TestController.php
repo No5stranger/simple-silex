@@ -68,4 +68,9 @@ class TestController
     {
         return new JsonResponse('hello cxp', 200);
     }
+
+    public function abortAction(Application $app)
+    {
+        return $app->abort(404);
+    }
 }
