@@ -6,6 +6,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Cookie;
 
+use Myele\Component\Http\JsonResponse;
+
 class TestController
 {
     public function showAppAction(Application $app, Request $request)
@@ -60,5 +62,10 @@ class TestController
     {
         d($app['host']);
         return 'config_service_provider';
+    }
+
+    public function jsonAction(Application $app)
+    {
+        return new JsonResponse('hello cxp', 200);
     }
 }

@@ -14,10 +14,12 @@ $app->get('/hello/{name}', function ($name) use ($app) {
 
 $app->get('/json', function () use ($app) {
     $result = array('a' => 'cjp');
-    return $app->json($result);
+    return json_encode($result);
 });
 
 $app->get('/app', 'Myele\Controller\Cjp\TestController::showAppAction');
+
+$app->get('/myjson', 'Myele\Controller\Cjp\TestController::jsonAction');
 
 $app->get('/test', 'Myele\Controller\Cjp\TestController::callAction')
     ->inApp();
