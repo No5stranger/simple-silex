@@ -10,6 +10,7 @@ class Route extends BaseRoute
 {
     public function inApp()
     {
+        // this call just before the route callback, and after the before before application middlerwares
         return $this
             ->before(
                 function (Request $request, Application $app) {

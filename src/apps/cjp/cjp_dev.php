@@ -15,6 +15,7 @@ $app = new Application();
 $app['route_class'] = 'Myele\\Component\\Route\\Route';
 
 include 'service.php';
+include 'middlewares.php';
 
 //whoopsServiceProvider: php debug tool
 $app->register(new WhoopsServiceProvider());
