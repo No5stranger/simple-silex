@@ -49,4 +49,10 @@ class TestController
         return $response;
         //return $ele_cookie . '+++' . $s_cookie;
     }
+
+    public function configAction(Application $app)
+    {
+        d($app['host']);
+        return 'config_service_provider';
+    }
 }

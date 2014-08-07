@@ -25,3 +25,5 @@ $app->get('/twig', 'Myele\Controller\Cjp\TestController::twigAction');
 $app->get('/req', 'Myele\Controller\Cjp\TestController::logRequestAction');
 
 $app->get('/cookie', 'Myele\Controller\Cjp\TestController::cookieAction');
+
+$app->get('/config', 'Myele\Controller\Cjp\TestController::configAction');

@@ -18,4 +18,5 @@ return array(
     'Silex' => array($vendorDir . '/silex/silex/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Pimple' => array($vendorDir . '/pimple/pimple/lib'),
+    'Igorw\\Silex' => array($vendorDir . '/igorw/config-service-provider/src'),
 );
