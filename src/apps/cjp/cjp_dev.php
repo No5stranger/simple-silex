@@ -15,11 +15,13 @@ $app['route_class'] = 'Myele\\Component\\Route\\Route';
 
 include 'service.php';
 
-$app['debug'] = true;
-
+//whoopsServiceProvider: php debug tool
 $app->register(new WhoopsServiceProvider());
+
 $app->register(new TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../../../templates'
 ));
+
+$app['debug'] = true;
 
 return $app;
