@@ -8,6 +8,12 @@ use Symfony\Component\HttpFoundation\Cookie;
 
 class TestController
 {
+    public function showAppAction(Application $app, Request $request)
+    {
+        d($app);
+        return "This page is show what the app is.";
+    }
+
     public function callAction(Application $app, Request $request)
     {
         $result = array(

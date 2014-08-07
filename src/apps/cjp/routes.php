@@ -17,6 +17,8 @@ $app->get('/json', function () use ($app) {
     return $app->json($result);
 });
 
+$app->get('/app', 'Myele\Controller\Cjp\TestController::showAppAction');
+
 $app->get('/test', 'Myele\Controller\Cjp\TestController::callAction')
     ->inApp();
 
