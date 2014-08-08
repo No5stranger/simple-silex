@@ -73,4 +73,10 @@ class TestController
     {
         return $app->abort(404);
     }
+
+    public function tokenAction(Application $app)
+    {
+        d($app['csrf']->check());
+        return 'here test token';
+    }
 }

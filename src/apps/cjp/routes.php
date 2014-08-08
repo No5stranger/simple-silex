@@ -33,3 +33,6 @@ $app->get('/cookie', 'Myele\Controller\Cjp\TestController::cookieAction');
 $app->get('/config', 'Myele\Controller\Cjp\TestController::configAction');
 
 $app->get('/abort', 'Myele\Controller\Cjp\TestController::abortAction');
+
+$app->get('/token', 'Myele\Controller\Cjp\TestController::tokenAction');
+
