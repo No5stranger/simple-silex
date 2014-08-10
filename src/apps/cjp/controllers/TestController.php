@@ -79,4 +79,31 @@ class TestController
         d($app['csrf']->check());
         return 'here test token';
     }
+
+    public function formAction(Request $request, Application $app)
+    {
+        $data = array(
+            'name' => 'Your name',
+            'email' => 'Your email'
+        );
+
+        $form = $app['form.factory']->createBuilder('form', $data)
+            ->add('name')
+            ->add('email')
+            ->add('gender', 'choice', array(
+                'choices' => array(1 => 'mail', 2 => 'female'),
+                'expanded' => true
+            ))
+            ->getForm();
+        $form->handleRequest($request);
+
+        if($form->isValid()) {
+            $data = $form->getData();
+
+            return $app->redirect('/');
+        }
+
+        return $app['twig']->render('form.twig', array('form' => $form->createView()));
+        //return 'abc';
+    }
 }
