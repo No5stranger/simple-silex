@@ -17,6 +17,8 @@ $app->get('/json', function () use ($app) {
     return json_encode($result);
 });
 
+$app->match('/form', 'Myele\Controller\Cjp\TestController::formAction');
+
 $app->get('/app', 'Myele\Controller\Cjp\TestController::showAppAction');
 
 $app->get('/myjson', 'Myele\Controller\Cjp\TestController::jsonAction');
