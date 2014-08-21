@@ -15,6 +15,6 @@ class SessionServiceProvider implements ServiceProviderInterface
 
     public function boot(Application $app)
     {
-        d($app['boss']);
+        //d($app['boss']);
     }
 }

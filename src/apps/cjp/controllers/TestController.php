@@ -47,12 +47,15 @@ class TestController
         $dt->modify("+1 month");
         //d($dt);
         $c = new Cookie("abc", "cjp", $dt);
+        $d = new Cookie("efg", "cxp", $dt);
+        //dd($c);
         //d($c->getValue('abc'));
         $response = new Response(
             'content',
             200
         );
         $response->headers->setCookie($c);
+        $response->headers->setCookie($d);
         //d($ele_cookie);
         return $response;
         //return $ele_cookie . '+++' . $s_cookie;
@@ -105,5 +108,11 @@ class TestController
 
         return $app['twig']->render('form.twig', array('form' => $form->createView()));
         //return 'abc';
+    }
+
+    public function phpConsoleAction(Application $app, Request $request)
+    {
+        \PC::debug('hello cxp');
+        return new JsonResponse('php console', 200);
     }
 }

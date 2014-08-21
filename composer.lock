@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c77912397cae4edb2073cd6d8d1e7097",
+    "hash": "decb54b84e994ee909006fa82b760ae9",
     "packages": [
         {
             "name": "filp/whoops",
@@ -113,6 +113,119 @@
                 "silex"
             ],
             "time": "2014-07-06 10:59:11"
+        },
+        {
+            "name": "php-console/php-console",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barbushin/php-console.git",
+                "reference": "1e6ebef04363fa86ddab9f9998ce537147ab9636"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barbushin/php-console/zipball/1e6ebef04363fa86ddab9f9998ce537147ab9636",
+                "reference": "1e6ebef04363fa86ddab9f9998ce537147ab9636",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "php-console/laravel-service-provider": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PhpConsole": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Barbushin",
+                    "email": "barbushin@gmail.com",
+                    "homepage": "http://linkedin.com/in/barbushin"
+                }
+            ],
+            "description": "Server side PHP library for Google Chrome extension \"PHP Console\".",
+            "homepage": "https://github.com/barbushin/php-console",
+            "keywords": [
+                "chrome",
+                "debug",
+                "error handler",
+                "errors",
+                "google chrome",
+                "php"
+            ],
+            "time": "2014-02-03 13:42:12"
+        },
+        {
+            "name": "php-console/silex-service-provider",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barbushin/php-console-silex.git",
+                "reference": "f78b2d637e25fd1301778617a33fc6dd2e57d1c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barbushin/php-console-silex/zipball/f78b2d637e25fd1301778617a33fc6dd2e57d1c0",
+                "reference": "f78b2d637e25fd1301778617a33fc6dd2e57d1c0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "php-console/php-console": ">3.1",
+                "silex/silex": "1.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PhpConsole\\Silex": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Barbushin",
+                    "email": "barbushin@gmail.com",
+                    "homepage": "http://linkedin.com/in/barbushin"
+                },
+                {
+                    "name": "Ivan",
+                    "homepage": "https://github.com/chi-teck"
+                }
+            ],
+            "description": "Silex service provider to handle PHP errors, dump variables, execute PHP code remotely in Google Chrome",
+            "homepage": "https://github.com/barbushin/php-console-silex",
+            "keywords": [
+                "chrome",
+                "debug",
+                "errors",
+                "logger",
+                "php",
+                "php-console",
+                "service provider",
+                "silex"
+            ],
+            "time": "2014-02-04 19:24:48"
         },
         {
             "name": "pimple/pimple",

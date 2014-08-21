@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Cookie;
 $app->before(
     function (Request $request) use ($app) {
         //here can do somthing like verify, redirect and so on.
-        d('before middlerwaes');
+        //d('before middlerwaes');
     }
 );
 
@@ -19,7 +19,7 @@ $app->before(
 $app->after(
     function (Request $request, Response $response) use ($app) {
         // here can do something like write cookie, clear the http cache and so on
-        d('after middlerwares');
+        //d('after middlerwares');
     }
 );
 
@@ -27,7 +27,7 @@ $app->after(
 $app->finish(
     function (Request $request, Response $response) use  ($app) {
         //here can do something like write log, send email and so on
-        d('finish middlerwares');
+        //d('finish middlerwares');
     }
 );
 

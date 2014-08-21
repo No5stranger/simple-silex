@@ -22,6 +22,27 @@ $app->register(new WhoopsServiceProvider());
 
 $app->register(new ConfigServiceProvider(__DIR__.'/../../../config/settings.php'));
 
+//php console
+$app['php-console.settings'] = array(
+  'sourcesBasePath' => dirname(__DIR__),
+  'serverEncoding' => null,
+  'headersLimit' => null,
+  'password' => null,
+  'enableSslOnlyMode' => false,
+  'ipMasks' => array(),
+  'isEvalEnabled' => false,
+  'dumperLevelLimit' => 5,
+  'dumperItemsCountLimit' => 100,
+  'dumperItemSizeLimit' => 5000,
+  'dumperDumpSizeLimit' => 500000,
+  'dumperDetectCallbacks' => true,
+  'detectDumpTraceAndSource' => false,
+);
+
+$app->register(new PhpConsole\Silex\ServiceProvider($app,
+    new \PhpConsole\Storage\File(sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'php-console.data') // any writable path
+));
+
 $app->register(new TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../../../templates'
 ));

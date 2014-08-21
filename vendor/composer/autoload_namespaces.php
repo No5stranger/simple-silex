@@ -30,5 +30,7 @@ return array(
     'Silex' => array($vendorDir . '/silex/silex/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Pimple' => array($vendorDir . '/pimple/pimple/lib'),
+    'PhpConsole\\Silex' => array($vendorDir . '/php-console/silex-service-provider/src'),
+    'PhpConsole' => array($vendorDir . '/php-console/php-console/src'),
     'Igorw\\Silex' => array($vendorDir . '/igorw/config-service-provider/src'),
 );

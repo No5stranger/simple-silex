@@ -12,7 +12,8 @@
         "filp/whoops": "1.0.8",
         "twig/twig": ">1.8,<2.0-dev",
         "symfony/twig-bridge": "2.3.3",
-        "igorw/config-service-provider": "1.2.2"
+        "igorw/config-service-provider": "1.2.2",
+        "php-console/silex-service-provider": "1.*"
     },
     "require-dev":
     {
