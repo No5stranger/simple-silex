@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Myele\\Controller\\Cjp\\' => array($baseDir . '/src/apps/cjp/controllers'),
     'Myele\\Component\\' => array($baseDir . '/src/components'),
+    'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
 );
