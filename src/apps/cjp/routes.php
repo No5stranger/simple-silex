@@ -26,7 +26,8 @@ $app->get('/myjson', 'Myele\Controller\Cjp\TestController::jsonAction');
 $app->get('/test', 'Myele\Controller\Cjp\TestController::callAction')
     ->inApp();
 
-$app->get('/twig', 'Myele\Controller\Cjp\TestController::twigAction');
+$app->get('/twig', 'Myele\Controller\Cjp\TestController::twigAction')
+    ->cache(60);
 
 $app->get('/req', 'Myele\Controller\Cjp\TestController::logRequestAction');
 

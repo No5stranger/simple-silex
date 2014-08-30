@@ -14,13 +14,13 @@ ExceptionHandler::register();
 $app = new Application();
 $app['route_class'] = 'Myele\\Component\\Route\\Route';
 
+$app->register(new ConfigServiceProvider(__DIR__.'/../../../config/settings.php'));
+
 include 'service.php';
 include 'middlewares.php';
 
 //whoopsServiceProvider: php debug tool
 $app->register(new WhoopsServiceProvider());
-
-$app->register(new ConfigServiceProvider(__DIR__.'/../../../config/settings.php'));
 
 //php console
 $app['php-console.settings'] = array(

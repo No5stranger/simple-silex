@@ -20,4 +20,21 @@ class Route extends BaseRoute
                 }
             );
     }
+
+    public function cache($time)
+    {
+        return $this
+            ->before(
+                function (Request $request, Application $app) {
+                    //unset(...) // remove the cache
+                }
+            )
+            ->after(
+                function (Request $request, Response $response) use ($time) {
+                    if ($response->getStatusCode() === 200) {
+                        $response->setTtl($time);
+                    }
+                }
+            );
+    }
 }

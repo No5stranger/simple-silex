@@ -7,5 +7,7 @@ return array(
     ),
     'secret' => array(
         'secret_token' => '_%cjptolove%_'
-    )
+    ),
+
+    'http_cache.cache_dir' => __DIR__.'../cache/'
 );
