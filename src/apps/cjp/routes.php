@@ -40,3 +40,5 @@ $app->get('/abort', 'Myele\Controller\Cjp\TestController::abortAction');
 $app->get('/token', 'Myele\Controller\Cjp\TestController::tokenAction');
 
 $app->get('console', 'Myele\Controller\Cjp\TestController::phpConsoleAction');
+
+$app->post('post', 'Myele\Controller\Cjp\TestController::postAction');
