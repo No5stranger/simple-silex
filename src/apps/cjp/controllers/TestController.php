@@ -115,4 +115,10 @@ class TestController
         \PC::debug('hello cxp');
         return new JsonResponse('php console', 200);
     }
+
+    public function postAction(Application $app)
+    {
+        print_r($_POST);
+        return 1;
+    }
 }
