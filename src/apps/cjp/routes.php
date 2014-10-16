@@ -42,3 +42,7 @@ $app->get('/token', 'Myele\Controller\Cjp\TestController::tokenAction');
 $app->get('console', 'Myele\Controller\Cjp\TestController::phpConsoleAction');
 
 $app->post('post', 'Myele\Controller\Cjp\TestController::postAction');
+
+$app->get('/redirect', 'Myele\Controller\Cjp\TestController::testRedirectAction');
+
+$app->get('/redirectResponse', 'Myele\Controller\Cjp\TestController::redirectDataAction');

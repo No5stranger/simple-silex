@@ -121,4 +121,15 @@ class TestController
         print_r($_POST);
         return 1;
     }
+
+    public function testRedirectAction(Application $app)
+    {
+        echo 'abc';
+        return $app->redirect('/redirectResponse');
+    }
+
+    public function redirectDataAction(Application $app)
+    {
+        return 'a';
+    }
 }
