@@ -132,4 +132,9 @@ class TestController
     {
         return 'a';
     }
+
+    public function urlGeneratorTestAction(Application $app)
+    {
+        return $app['url_generator']->generate('test_cookie');
+    }
 }

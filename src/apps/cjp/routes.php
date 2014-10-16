@@ -31,7 +31,8 @@ $app->get('/twig', 'Myele\Controller\Cjp\TestController::twigAction')
 
 $app->get('/req', 'Myele\Controller\Cjp\TestController::logRequestAction');
 
-$app->get('/cookie', 'Myele\Controller\Cjp\TestController::cookieAction');
+$app->get('/cookie', 'Myele\Controller\Cjp\TestController::cookieAction')
+    ->bind('test_cookie');
 
 $app->get('/config', 'Myele\Controller\Cjp\TestController::configAction');
 
@@ -46,3 +47,5 @@ $app->post('post', 'Myele\Controller\Cjp\TestController::postAction');
 $app->get('/redirect', 'Myele\Controller\Cjp\TestController::testRedirectAction');
 
 $app->get('/redirectResponse', 'Myele\Controller\Cjp\TestController::redirectDataAction');
+
+$app->get('/urlGenerator', 'Myele\Controller\Cjp\TestController::urlGeneratorTestAction');
