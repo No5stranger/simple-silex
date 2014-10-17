@@ -143,9 +143,10 @@ class TestController
 
     public function fakerAction(Application $app)
     {
-        $faker = fakerFactory::create();
+        $faker = fakerFactory::create('zh_CN');
         $base = new Base($faker);
         d($base->lexify('???'));
+        d($faker->name);
         d($faker);
         return '2B';
     }
