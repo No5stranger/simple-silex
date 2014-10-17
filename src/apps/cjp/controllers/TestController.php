@@ -8,6 +8,9 @@ use Symfony\Component\HttpFoundation\Cookie;
 
 use Myele\Component\Http\JsonResponse;
 
+use Faker\Factory as fakerFactory;
+use Faker\Provider\Base;
+
 class TestController
 {
     public function showAppAction(Application $app, Request $request)
@@ -136,5 +139,14 @@ class TestController
     public function urlGeneratorTestAction(Application $app)
     {
         return $app['url_generator']->generate('test_cookie');
+    }
+
+    public function fakerAction(Application $app)
+    {
+        $faker = fakerFactory::create();
+        $base = new Base($faker);
+        d($base->lexify('???'));
+        d($faker);
+        return '2B';
     }
 }

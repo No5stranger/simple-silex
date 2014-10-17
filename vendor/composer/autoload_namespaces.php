@@ -33,4 +33,6 @@ return array(
     'PhpConsole\\Silex' => array($vendorDir . '/php-console/silex-service-provider/src'),
     'PhpConsole' => array($vendorDir . '/php-console/php-console/src'),
     'Igorw\\Silex' => array($vendorDir . '/igorw/config-service-provider/src'),
+    'Faker\\PHPUnit' => array($vendorDir . '/fzaninotto/faker/test'),
+    'Faker' => array($vendorDir . '/fzaninotto/faker/src'),
 );
