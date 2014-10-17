@@ -14,7 +14,8 @@
         "symfony/twig-bridge": "2.3.3",
         "monolog/monolog": ">=1.0.0",
         "igorw/config-service-provider": "1.2.2",
-        "php-console/silex-service-provider": "1.*"
+        "php-console/silex-service-provider": "1.*",
+        "fzaninotto/faker": "1.4.0"
     },
     "require-dev":
     {

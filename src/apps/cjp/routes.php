@@ -49,3 +49,5 @@ $app->get('/redirect', 'Myele\Controller\Cjp\TestController::testRedirectAction'
 $app->get('/redirectResponse', 'Myele\Controller\Cjp\TestController::redirectDataAction');
 
 $app->get('/urlGenerator', 'Myele\Controller\Cjp\TestController::urlGeneratorTestAction');
+
+$app->get('/faker', 'Myele\Controller\Cjp\TestController::fakerAction');
