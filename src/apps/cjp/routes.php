@@ -51,3 +51,8 @@ $app->get('/redirectResponse', 'Myele\Controller\Cjp\TestController::redirectDat
 $app->get('/urlGenerator', 'Myele\Controller\Cjp\TestController::urlGeneratorTestAction');
 
 $app->get('/faker', 'Myele\Controller\Cjp\TestController::fakerAction');
+
+$app->get('/xml', 'Myele\Controller\Cjp\TestController::xmlPageAction');
+
+$app->post('/xml', 'Myele\Controller\Cjp\TestController::checkXmlAction')
+    ->xml();

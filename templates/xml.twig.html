@@ -1,0 +1,21 @@
+<html>
+    <title>send xml data</title>
+    <script src="/public/js/jquery-2.1.1.js"></script>
+    <body>
+        <h3 class='xml'>click the button to send a data</h3>
+        <p><button id='xml_button'>send</button></p>
+    </body>
+    <script>
+        $("#xml_button").click(function() {
+            $.ajax({
+                url: "/xml",
+                type: "POST",
+                data: {
+                    "a": "aaa"
+                }
+            }).success(function(data) {
+                console.log(data);
+            });
+        });
+    </script>
+</html>

@@ -37,4 +37,16 @@ class Route extends BaseRoute
                 }
             );
     }
+
+    public function xml()
+    {
+        return $this
+            ->before(
+                function (Request $request, Application $app) {
+                    return $app->json($request->getMethod());
+                    //return $app->json($request->getRealMethod());
+                    //return $app->json($request->isXmlHttpRequest());
+                }
+            );
+    }
 }

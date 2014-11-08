@@ -150,4 +150,14 @@ class TestController
         d($faker);
         return '2B';
     }
+
+    public function xmlPageAction(Application $app)
+    {
+        return $app['twig']->render('xml.twig.html');
+    }
+
+    public function checkXmlAction(Application $app)
+    {
+        return 'done';
+    }
 }
