@@ -158,6 +158,12 @@ class TestController
 
     public function checkXmlAction(Application $app)
     {
-        return 'done';
+        return $app->redirect($app['url_generator']->generate('redirect_twice', [], true));
+        //return 'done';
+    }
+
+    public function twoRedirectAction(Application $app)
+    {
+        return 'two_redirect';
     }
 }

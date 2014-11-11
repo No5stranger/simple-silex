@@ -54,5 +54,8 @@ $app->get('/faker', 'Myele\Controller\Cjp\TestController::fakerAction');
 
 $app->get('/xml', 'Myele\Controller\Cjp\TestController::xmlPageAction');
 
-$app->post('/xml', 'Myele\Controller\Cjp\TestController::checkXmlAction')
-    ->xml();
+$app->post('/xml', 'Myele\Controller\Cjp\TestController::checkXmlAction');
+
+$app->post('/redirect/twice', 'Myele\Controller\Cjp\TestController::twoRedirectAction')
+    ->bind('redirect_twice');
+
