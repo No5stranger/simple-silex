@@ -37,6 +37,7 @@ $app->error(
             case 404:
                 return '404 bad request';
             default:
+                var_dump($e);
                 return '500';
         }
     }

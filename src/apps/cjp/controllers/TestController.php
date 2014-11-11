@@ -150,4 +150,20 @@ class TestController
         d($faker);
         return '2B';
     }
+
+    public function xmlPageAction(Application $app)
+    {
+        return $app['twig']->render('xml.twig.html');
+    }
+
+    public function checkXmlAction(Application $app)
+    {
+        return $app->redirect($app['url_generator']->generate('redirect_twice', [], true));
+        //return 'done';
+    }
+
+    public function twoRedirectAction(Application $app)
+    {
+        return 'two_redirect';
+    }
 }
