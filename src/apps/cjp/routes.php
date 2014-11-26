@@ -21,6 +21,8 @@ $app->match('/form', 'Myele\Controller\Cjp\TestController::formAction');
 
 $app->get('/app', 'Myele\Controller\Cjp\TestController::showAppAction');
 
+$app->get('/app.cgi', 'Myele\Controller\Cjp\TestController::showAppAction');
+
 $app->get('/myjson', 'Myele\Controller\Cjp\TestController::jsonAction');
 
 $app->get('/test', 'Myele\Controller\Cjp\TestController::callAction')
